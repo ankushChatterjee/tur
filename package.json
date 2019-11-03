@@ -1,13 +1,10 @@
 {
   "name": "tur",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "debug": "node index.js program.tur"
-  },
+  "main": "tur.js",
   "keywords": [],
-  "author": "",
+  "author": "Ankush Chatterjee <ac.ankush15@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.2"
