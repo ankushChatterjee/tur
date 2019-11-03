@@ -1,0 +1,18 @@
+{
+  "name": "tur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node index.js program.tur"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
+  "bin": {
+    "tur": "./tur.js"
+  }
+}

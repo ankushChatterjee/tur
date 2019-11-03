@@ -1,0 +1,24 @@
+#init_tape 1,2,3,4
+show_tape
+
+loop neq BLANK
+  show
+  
+  if eq 3
+    print got 3
+  endblock
+
+  right
+
+  if eq 4
+    print got 4
+    
+    loop neq BLANK
+      show
+      left
+    
+    endblock
+  endblock
+
+
+endblock
