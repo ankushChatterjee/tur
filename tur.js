@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const fs = require('fs');
 const file = process.argv[2];
 const TreeConstructor  = require('./src/TreeConstructor');
@@ -12,7 +11,6 @@ let tapeState = [];
 
 function directiveProcessor(lineObj) {
   let {command, args} = lineObj;
-  
   switch(command) {
     case '#init_tape':
       for(let arg of args[0].split(',')){
