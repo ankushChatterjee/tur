@@ -6,10 +6,16 @@
   "keywords": [],
   "author": "Ankush Chatterjee <ac.ankush15@gmail.com>",
   "license": "ISC",
+  "scripts": {
+    "test":"mocha"
+  },
   "dependencies": {
     "chalk": "^2.4.2"
   },
   "bin": {
     "tur": "./tur.js"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
   }
 }

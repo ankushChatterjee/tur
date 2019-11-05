@@ -5,6 +5,7 @@ class PrintStatement extends Statement {
   }
   execute(tapeState){
     console.log(this.args);
+    return this.args;
   }
 }
 module.exports = PrintStatement;

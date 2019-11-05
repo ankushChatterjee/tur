@@ -9,6 +9,7 @@ class LeftStatement extends Statement {
       tapeState.tape.unshift('BLANK');
       tapeState.idx = 0;
     }
+    return tapeState.tape[tapeState.idx];
   }
 }
 module.exports = LeftStatement;

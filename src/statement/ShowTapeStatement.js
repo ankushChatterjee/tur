@@ -22,6 +22,8 @@ class ShowTapeStatement extends Statement {
     printOut += ' ...';
 
     console.log(printOut);
+
+    return printOut;
   }
 }
 module.exports = ShowTapeStatement;

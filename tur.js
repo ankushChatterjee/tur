@@ -4,8 +4,7 @@ const fs = require('fs');
 const file = process.argv[2];
 const TreeConstructor  = require('./src/TreeConstructor');
 const TuringMachine = require('./src/TuringMachine');
-const programContent = fs.readFileSync(file).toString();
-const  lines = programContent.split('\n');
+
 
 let tapeState = [];
 
@@ -22,8 +21,15 @@ function directiveProcessor(lineObj) {
   }
 }
 
-const tc = new TreeConstructor(lines,directiveProcessor);
-let ast = tc.constructTree();
+function runWithFile(filePath) {
+  const programContent = fs.readFileSync(file).toString();
+  const  lines = programContent.split('\n');
+  const tc = new TreeConstructor(lines,directiveProcessor);
+  let ast = tc.constructTree();
 
-let machine = new TuringMachine(tapeState,ast);
-machine.run();
+  let machine = new TuringMachine(tapeState,ast);
+  machine.run();
+}
+
+
+runWithFile(file);

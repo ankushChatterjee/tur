@@ -19,11 +19,14 @@ class LoopStatement extends Statement {
     }
   }
   execute(tapeState){
+    let retValues = [];
     while(this.checkCondition(tapeState.tape[tapeState.idx])){
       for(let statement of this.innerStatements){
-        statement.execute(tapeState);
+        const ret = statement.execute(tapeState);
+        retValues.push(ret);
       }
     }
+    return retValues;
   }
 }
 module.exports = LoopStatement;

@@ -18,9 +18,6 @@ class IfStatement extends Statement {
 
   separateThenElse() {
     let i = 0;
-
-
-
     while(i < this.innerStatements.length &&  this.innerStatements[i].command.trim() !== 'else'){
       this.thenStatements.push(this.innerStatements[i]);
       i++;
@@ -47,18 +44,20 @@ class IfStatement extends Statement {
     }
   }
   execute(tapeState){
+    let retValues = [];
     if(this.checkCondition(tapeState.tape[tapeState.idx])){
       for(let statement of this.thenStatements){
-        statement.execute(tapeState);
+        let ret = statement.execute(tapeState);
+        retValues.push(ret);
       }
     }else{
       for(let statement of this.elseStatements){
-        statement.execute(tapeState);
+        let ret = statement.execute(tapeState);
+        retValues.push(ret);
       }
     }
-
-
-   
+    console.log(retValues);
+    return retValues;
   }
 }
 module.exports = IfStatement;

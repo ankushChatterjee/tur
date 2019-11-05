@@ -5,6 +5,7 @@ class ShowStatement extends Statement {
   }
   execute(tapeState){
     console.log(tapeState.tape[tapeState.idx]);
+    return tapeState.tape[tapeState.idx];
   }
 }
 module.exports = ShowStatement;

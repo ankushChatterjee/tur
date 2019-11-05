@@ -7,6 +7,7 @@ class RightStatement extends Statement {
     tapeState.idx += 1;
     if(tapeState.idx >= tapeState.tape.length)
         tapeState.tape.push('BLANK');
+    return tapeState.tape[tapeState.idx];
   }
 }
 module.exports = RightStatement;
