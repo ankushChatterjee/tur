@@ -4,12 +4,18 @@
 ---
 
 After getting the code go inside the root folder.
+
 ``` npm install ```
 
 to install all the dependencies
 
 Then run the command.
+
 ```npm link```
+
+Tests can be run
+
+```npm test```
 
 After this you should be able to run any program
 
@@ -20,6 +26,9 @@ After this you should be able to run any program
 ## About tur
 
 tur is an interpreted programming language running on a simulated turing machine. (The program is not stored on the turing machine only data)
+
+The turing machine simulation here does not use "states" instead the operations (Left / Right) (done by the states) can be done with the commands and if statements and states can be looped with the loop command. This is done to have a structure of a normal programming language. 
+Though, adding a dedicated state mechanism is my intention. States would be like objects with 4-tuple representations. The normal programming structure along with states would give ease of learning along with a chance for the usert to understand the concept of a turing machine.
 
 The following are the commands
 
